@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>産前産後リハビリ 基礎力チェック20</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B1S3SB8DG3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-B1S3SB8DG3');
+</script>
+
+<style>
+  :root {
+    --teal:    #0D2B4E;
+    --teal-lt: #C8D9EE;
+    --green:   #1A6B3A;
+    --green-lt:#D6F0E3;
+    --purple:  #7B2D8B;
+    --purple-lt:#EDD6F5;
+    --orange:  #B05A00;
+    --orange-lt:#FAE8D0;
+    --red:     #8B2020;
+    --red-lt:  #FAD6D6;
+    --blue:    #1B4A7A;
+    --blue-lt: #C8D9EE;
+    --navy:    #0D2B4E;
+    --navy-mid:#1B4A7A;
+    --gray-50: #F0F4F8;
+    --gray-100:#E2EAF2;
+    --gray-200:#C8D6E5;
+    --gray-400:#7A95B0;
+    --gray-600:#3A5470;
+    --gray-800:#0D1E30;
+    --white:   #FFFFFF;
+    --radius:  10px;
+    --shadow:  0 4px 24px rgba(13,43,78,0.14);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+    background: #E8EFF7;
+    color: var(--gray-800);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    width: 100%;
+    background: linear-gradient(90deg, #0D2B4E 0%, #1B4A7A 100%);
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 2px 10px rgba(13,43,78,0.35);
+  }
+  .site-header .logo {
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .site-header .sep { color: rgba(255,255,255,0.3); font-size: 18px; }
+  .site-header .title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  /* ── MAIN CARD ── */
+  .card {
+    width: 100%;
+    max-width: 760px;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 32px 16px;
+    overflow: hidden;
+  }
+
+  /* ── SECTION SCREENS ── */
+  .screen { display: none; }
+  .screen.active { display: block; }
+
+  /* ── INTRO ── */
+  .intro-hero {
+    background: linear-gradient(135deg, #0D2B4E 0%, #1B4A7A 100%);
+    padding: 40px 40px 32px;
+    color: #fff;
+  }
+  .intro-hero h1 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .intro-hero p {
+    font-size: 13px;
+    opacity: 0.85;
+    line-height: 1.7;
+  }
+  .supervisor {
+    display: inline-block;
+    margin: 10px 0 14px;
+    padding: 5px 12px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: rgba(255,255,255,0.92);
+    background: rgba(255,255,255,0.10);
+  }
+  .intro-body { padding: 32px 40px; }
+  .intro-body h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--teal);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--teal-lt);
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  @media (max-width: 560px) { .info-grid { grid-template-columns: 1fr; } }
+  .field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gray-600);
+    margin-bottom: 6px;
+    letter-spacing: 0.04em;
+  }
+  .field label .req { color: #e53e3e; margin-left: 3px; }
+  .field input, .field select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 7px;
+    font-size: 14px;
+    color: var(--gray-800);
+    background: var(--gray-50);
+    transition: border-color .2s, box-shadow .2s;
+    outline: none;
+  }
+  .field input:focus, .field select:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(13,43,78,0.15);
+    background: #fff;
+  }
+  .field input.error { border-color: #e53e3e; }
+
+  .notice-box {
+    background: var(--teal-lt);
+    border-left: 4px solid var(--teal);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 28px;
+  }
+  .notice-box p { font-size: 13px; color: var(--gray-600); line-height: 1.7; }
+  .notice-box strong { color: var(--teal); }
+
+  .chapter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+  .chip {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: #fff;
+  }
+
+  .btn-start {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s, transform .1s;
+    letter-spacing: 0.03em;
+  }
+  .btn-start:hover { background: #0a2040; }
+  .btn-start:active { transform: scale(0.99); }
+
+  /* ── PROGRESS BAR ── */
+  .progress-wrap {
+    padding: 0;
+    background: var(--gray-100);
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 28px 8px;
+    font-size: 12px;
+    color: var(--gray-600);
+  }
+  .progress-info .chap-badge {
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 11px;
+  }
+  .progress-bar {
+    height: 5px;
+    background: var(--gray-200);
+  }
+  .progress-fill {
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+    transition: width .4s ease, background-color .4s;
+  }
+
+  /* ── QUESTION ── */
+  .q-body { padding: 28px 36px 24px; }
+  .q-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    margin-bottom: 10px;
+  }
+  .q-text {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: var(--gray-800);
+    margin-bottom: 22px;
+  }
+  .choices { display: flex; flex-direction: column; gap: 10px; }
+  .choice-btn {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 13px 18px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 8px;
+    background: var(--white);
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--gray-800);
+    transition: border-color .15s, background .15s;
+    width: 100%;
+  }
+  .choice-btn:hover:not(:disabled) {
+    border-color: var(--teal);
+    background: var(--teal-lt);
+  }
+  .choice-btn .key {
+    font-weight: 800;
+    font-size: 13px;
+    min-width: 22px;
+    color: var(--gray-400);
+    margin-top: 1px;
+  }
+  .choice-btn.selected {
+    border-color: var(--teal);
+    background: var(--teal-lt);
+  }
+  .choice-btn.selected .key { color: var(--teal); }
+  .choice-btn.correct {
+    border-color: var(--green);
+    background: var(--green-lt);
+  }
+  .choice-btn.correct .key { color: var(--green); }
+  .choice-btn.wrong {
+    border-color: var(--red);
+    background: var(--red-lt);
+  }
+  .choice-btn.wrong .key { color: var(--red); }
+
+  .q-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px 28px;
+    gap: 12px;
+  }
+  .btn-ghost {
+    padding: 10px 20px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 7px;
+    background: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--gray-600);
+    transition: border-color .15s;
+  }
+  .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+  .btn-primary {
+    padding: 10px 28px;
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .15s;
+  }
+  .btn-primary:hover { background: #0a2040; }
+  .btn-primary:disabled { background: var(--gray-400); cursor: not-allowed; }
+
+  .explanation-box {
+    margin: 4px 36px 20px;
+    padding: 14px 18px;
+    border-radius: 7px;
+    font-size: 13px;
+    line-height: 1.7;
+    display: none;
+  }
+  .explanation-box.show { display: block; }
+  .explanation-box.correct-exp {
+    background: var(--green-lt);
+    border-left: 4px solid var(--green);
+    color: #1a3d2b;
+  }
+  .explanation-box.wrong-exp {
+    background: var(--red-lt);
+    border-left: 4px solid var(--red);
+    color: #5a1a1a;
+  }
+  .explanation-box strong { display: block; margin-bottom: 4px; }
+
+  /* ── RESULT ── */
+  .result-hero {
+    padding: 40px 40px 28px;
+    text-align: center;
+  }
+  .score-ring {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    position: relative;
+  }
+  .score-ring svg { transform: rotate(-90deg); }
+  .score-ring .ring-bg { fill: none; stroke: var(--gray-200); stroke-width: 10; }
+  .score-ring .ring-fill { fill: none; stroke-width: 10; stroke-linecap: round; transition: stroke-dashoffset 1s ease; }
+  .score-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .score-center .num { font-size: 32px; font-weight: 800; }
+  .score-center .denom { font-size: 13px; color: var(--gray-400); }
+  .result-title { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+  .result-sub { font-size: 14px; color: var(--gray-600); }
+
+  .result-table { margin: 20px 36px; }
+  .result-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .result-table th {
+    background: var(--gray-100);
+    padding: 8px 14px;
+    text-align: left;
+    font-weight: 700;
+    color: var(--gray-600);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .result-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--gray-100);
+    vertical-align: middle;
+  }
+  .result-table tr:last-child td { border-bottom: none; }
+  .pct-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pct-track {
+    flex: 1;
+    height: 6px;
+    background: var(--gray-200);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .pct-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 1s ease;
+  }
+  .badge-pass {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+  }
+  .badge-pass.pass { background: var(--green-lt); color: var(--green); }
+  .badge-pass.fail { background: var(--red-lt); color: var(--red); }
+
+  .result-actions {
+    display: flex;
+    gap: 12px;
+    padding: 16px 36px 36px;
+    flex-wrap: wrap;
+  }
+  .btn-outline {
+    flex: 1;
+    min-width: 140px;
+    padding: 12px;
+    border: 1.5px solid var(--teal);
+    border-radius: 7px;
+    background: var(--white);
+    color: var(--teal);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    transition: background .15s;
+  }
+  .btn-outline:hover { background: var(--teal-lt); }
+  .btn-send {
+    flex: 1;
+    min-width: 140px;
+    padding: 12px;
+    background: var(--green);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .15s;
+  }
+  .btn-send:hover { background: #145c2f; }
+  .btn-send:disabled { background: var(--gray-400); cursor: not-allowed; }
+
+  .send-status {
+    margin: 0 36px 20px;
+    padding: 12px 16px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    display: none;
+  }
+  .send-status.ok { background: var(--green-lt); color: var(--green); display: block; }
+  .send-status.err { background: var(--red-lt); color: var(--red); display: block; }
+
+  /* ── LOADING OVERLAY ── */
+  .overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(27,94,138,0.18);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+  }
+  .overlay.show { display: flex; }
+  .spinner {
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--teal-lt);
+    border-top-color: var(--teal);
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  @media (max-width: 600px) {
+    .card { margin: 16px 8px; }
+    .intro-hero, .intro-body { padding: 28px 20px; }
+    .q-body { padding: 20px 20px 16px; }
+    .q-nav { padding: 0 20px 20px; }
+    .explanation-box { margin: 4px 20px 16px; }
+    .result-hero { padding: 28px 20px; }
+    .result-table { margin: 16px 20px; }
+    .result-actions { padding: 12px 20px 28px; }
+    .send-status { margin: 0 20px 16px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .progress-info { padding: 10px 16px 6px; }
+    .q-text { font-size: 14px; }
+  }
+
+
+  /* ── ACADEMY CTA / DIAGNOSIS ── */
+  .intro-lead {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--gray-600);
+    margin-bottom: 24px;
+  }
+  .privacy-note {
+    background: #fff;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 28px;
+    font-size: 12px;
+    color: var(--gray-600);
+    line-height: 1.8;
+  }
+  .privacy-note strong { color: var(--teal); }
+  .result-message {
+    margin: 18px auto 0;
+    max-width: 620px;
+    padding: 18px 20px;
+    border-radius: 10px;
+    background: var(--gray-50);
+    border: 1.5px solid var(--gray-200);
+    text-align: left;
+  }
+  .result-message h3 {
+    font-size: 16px;
+    color: var(--teal);
+    margin-bottom: 8px;
+  }
+  .result-message p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--gray-600);
+  }
+  .academy-cta-box {
+    margin: 20px 36px 0;
+    padding: 20px 22px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #0D2B4E 0%, #1B4A7A 100%);
+    color: #fff;
+  }
+  .academy-cta-box h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+  .academy-cta-box p {
+    font-size: 13px;
+    line-height: 1.8;
+    opacity: 0.92;
+  }
+  .btn-send, .btn-send:visited {
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 600px) {
+    .academy-cta-box { margin: 16px 20px 0; }
+  }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <span class="logo">想千グループ</span>
+  <span class="sep">|</span>
+  <span class="title">産前産後リハビリ 基礎力チェック20</span>
+</header>
+
+<div class="card">
+
+  <!-- ============================================================ INTRO -->
+  <div class="screen active" id="screen-intro">
+    <div class="intro-hero">
+      <h1>産前産後リハビリ<br>基礎力チェック20</h1>
+      <div class="supervisor">監修：産前産後専門整形外科医　阿波康成</div>
+      <p>妊婦さん・産後ママを安心して担当するために必要な「安全判断」「身体評価」「声かけ」「実践介入」の基礎を20問で確認できます。</p>
+    </div>
+    <div class="intro-body">
+      <h2>今の理解度をチェックする</h2>
+      <p class="intro-lead">
+        このチェックは、合否をつけるための試験ではありません。<br>
+        産前産後リハビリの現場で「触ってよいか」「運動してよいか」「医師に確認すべきか」「どう声をかけるか」を判断するための現在地を確認する診断です。
+      </p>
+
+      <div class="notice-box">
+        <p><strong>この20問が簡単に感じられるレベルまで、アカデミーで育てます。</strong><br>
+        産前産後リハビリアカデミーでは、知識を覚えるだけでなく、妊産婦さんを前にしたときに評価・説明・介入まで実践できる力を体系的に身につけることを目指します。</p>
+      </div>
+
+      <div class="privacy-note">
+        <strong>個人情報の入力は不要です。</strong><br>
+        このチェックでは、氏名・メールアドレスなど個人を特定する情報は取得しません。<br>
+        テスト改善のため、ページ閲覧・開始・完了・点数などの匿名データを取得する場合があります。
+      </div>
+
+      <div class="chapter-chips" id="chip-list"></div>
+
+      <button class="btn-start" onclick="startTest()">20問チェックを開始する →</button>
+    </div>
+  </div>
+
+  <!-- ============================================================ QUESTION -->
+  <div class="screen" id="screen-question">
+    <div class="progress-wrap">
+      <div class="progress-info">
+        <span class="chap-badge" id="chap-badge">第1章</span>
+        <span id="prog-text">問 1 / 70</span>
+        <span id="score-live">正答：0問</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+      </div>
+    </div>
+
+    <div class="q-body">
+      <div class="q-num" id="q-num">問題 1</div>
+      <div class="q-text" id="q-text"></div>
+      <div class="choices" id="choices"></div>
+    </div>
+
+    <div class="explanation-box" id="exp-box"></div>
+
+    <div class="q-nav">
+      <span id="q-status" style="font-size:13px;color:var(--gray-400)"></span>
+      <button class="btn-primary" id="btn-next" onclick="nextQuestion()" disabled>次の問題 →</button>
+    </div>
+  </div>
+
+  <!-- ============================================================ RESULT -->
+  <div class="screen" id="screen-result">
+    <div class="result-hero">
+      <div class="score-ring">
+        <svg viewBox="0 0 130 130" width="130" height="130">
+          <circle class="ring-bg" cx="65" cy="65" r="55"/>
+          <circle class="ring-fill" id="ring-fill" cx="65" cy="65" r="55"
+                  stroke-dasharray="345.6" stroke-dashoffset="345.6"/>
+        </svg>
+        <div class="score-center">
+          <span class="num" id="res-score">0</span>
+          <span class="denom">/20問</span>
+        </div>
+      </div>
+      <div class="result-title" id="res-title">テスト結果</div>
+      <div class="result-sub" id="res-sub"></div>
+      <div class="result-message" id="result-message"></div>
+    </div>
+
+    <div class="result-table">
+      <table>
+        <thead>
+          <tr>
+            <th>章</th>
+            <th>正答数</th>
+            <th>正答率</th>
+          </tr>
+        </thead>
+        <tbody id="result-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="academy-cta-box">
+      <h3>産前産後リハビリアカデミーで、実践できる力へ</h3>
+      <p>この20問で少しでも迷う問題があった方は、まだ伸びしろがあります。基礎知識・リスク判断・評価・声かけ・実践介入を、現場で使える形に変えていきましょう。</p>
+    </div>
+
+    <div class="result-actions">
+      <button class="btn-outline" onclick="retakeTest()">もう一度チェックする</button>
+      <a class="btn-send"
+         href="https://coamo-s.com/mr_academy.html"
+         target="_blank"
+         rel="noopener noreferrer"
+         onclick="if (typeof gtag === 'function') { gtag('event', 'academy_click', { test_name: '産前産後リハビリ基礎力チェック20' }); }">アカデミーの詳細を見る</a>
+    </div>
+  </div>
+
+</div><!-- /card -->
+
+<div class="overlay" id="overlay"><div class="spinner"></div></div>
+
+<script>
+// ════════════════════════════════════════════════════════════
+// ★ WEBHOOK URL をここに設定してください
+// ════════════════════════════════════════════════════════════
+const WEBHOOK_URL = 'https://chat.googleapis.com/v1/spaces/XXXXXXXX/messages?key=XXXXXX&token=XXXXXX';
+
+// ════════════════════════════════════════════════════════════
+// 問題データ（ファクトチェック済み20問）
+// ★ hard:true の問題は各章5問、選択肢が紛らわしい難問
+// ════════════════════════════════════════════════════════════
+const CHAPTERS = [
+  {
+    "id": 1,
+    "title": "第1章",
+    "label": "妊婦の医学的基礎",
+    "color": "#1B5E8A",
+    "bg": "#D6E8F5",
+    "questions": [
+      {
+        "q": "1. 分娩予定日の算出と修正について、最も適切なのはどれか。",
+        "choices": [
+          "A. 最終月経初日を0週0日として280日を目安にし、必要に応じて妊娠初期超音波で修正される",
+          "B. 受精日を0週0日として280日を目安にし、月経周期に関係なく固定する",
+          "C. 胎児推定体重が標準範囲に入った時点を基準に予定日を再設定する",
+          "D. 妊娠後期の子宮底長を基準に予定日を決めるのが最も正確である"
+        ],
+        "answer": "A",
+        "explanation": "予定日は最終月経初日を0週0日として280日を目安にする。ただし月経周期が不規則な場合などは、妊娠初期の超音波所見により産科で修正されることがある。"
+      },
+      {
+        "q": "2. 合併症のない妊娠中の運動強度を説明する場合、最も適切なのはどれか。",
+        "choices": [
+          "A. 妊娠中は安静を優先し、日常生活以上の身体活動は避ける",
+          "B. 会話ができる程度、またはBorg 11〜13程度を目安にし、症状と産科的リスクを確認しながら行う",
+          "C. 胎児心拍を上げるため、短時間であれば最大心拍数90%以上まで上げる",
+          "D. 妊娠28週以降は週数だけで運動を中止し、それ以前は制限なく行う"
+        ],
+        "answer": "B",
+        "explanation": "禁忌や合併症がなければ妊娠中の身体活動は安全で有益とされる。強度は会話可能な範囲やBorg 11〜13程度を目安にし、出血・腹痛・羊水漏出などの警告症状を確認する。"
+      },
+      {
+        "q": "3. 妊娠中期以降、仰臥位で気分不快・冷汗・血圧低下が出た時の初期対応として最も適切なのはどれか。",
+        "choices": [
+          "A. 下肢挙上だけを行い、仰臥位のまま様子を見る",
+          "B. 左側臥位または側方傾斜位に変え、症状の改善を確認する",
+          "C. 呼吸が落ち着くまで仰臥位で深呼吸を続ける",
+          "D. 水分摂取を促し、運動メニューは予定どおり継続する"
+        ],
+        "answer": "B",
+        "explanation": "妊娠中期以降の仰臥位では、増大した子宮が下大静脈を圧迫し静脈還流が低下することがある。まず左側臥位または側方傾斜位へ体位変換し、症状・血圧・意識状態を確認する。"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "第2章",
+    "label": "妊娠経過のリスク",
+    "color": "#1A6B3A",
+    "bg": "#D6F0E3",
+    "questions": [
+      {
+        "q": "4. 妊娠中の運動・徒手介入中に、介入を中止して医師・助産師への確認を優先すべき組み合わせはどれか。",
+        "choices": [
+          "A. 運動後の軽い疲労感、翌日の軽い筋肉痛、会話可能な息切れ",
+          "B. 軽い下肢浮腫、姿勢変化に伴う腰部違和感、運動中の発汗",
+          "C. 性器出血、羊水漏出、規則的で痛みを伴う子宮収縮、胸痛や強いめまい",
+          "D. 軽い肩こり、授乳姿勢の相談、夕方に増える両側足背浮腫"
+        ],
+        "answer": "C",
+        "explanation": "性器出血、羊水漏出、規則的で痛みを伴う子宮収縮、胸痛、強いめまい、ふくらはぎの痛みや腫脹などは運動中止と医療者への確認が必要な警告サインである。"
+      },
+      {
+        "q": "5. 前置胎盤を指摘されている妊婦から腰痛相談を受けた場合、初回対応として最も安全なのはどれか。",
+        "choices": [
+          "A. 出血がなければ、通常のストレッチと骨盤周囲の徒手介入を開始する",
+          "B. 産科で指示されている活動制限・出血歴・週数を確認し、許可された範囲で姿勢指導や負担軽減策を検討する",
+          "C. 運動療法は避けるが、腹部や骨盤帯への徒手介入は確認なしで行える",
+          "D. 前置胎盤では腰痛介入の余地がないため、身体面の相談は一切扱わない"
+        ],
+        "answer": "B",
+        "explanation": "前置胎盤では出血リスクが問題となる。まず産科の指示、活動制限、出血歴、週数を確認し、許可された範囲で介入する。確認なしの運動・徒手介入は避ける。"
+      },
+      {
+        "q": "6. 妊娠高血圧症候群・子癇前症の悪化を疑い、単なる妊娠中の不調として扱わない方がよい組み合わせはどれか。",
+        "choices": [
+          "A. 夕方に増える両側下腿浮腫と軽い腰痛のみ",
+          "B. 持続する頭痛、視覚異常、右上腹部痛、血圧上昇や急な浮腫増悪",
+          "C. 妊娠後期の恥骨部違和感と歩行時の骨盤帯痛",
+          "D. 運動後に休めば改善する息切れと軽い発汗"
+        ],
+        "answer": "B",
+        "explanation": "子癇前症の重症化では、持続する頭痛、視覚異常、右上腹部痛、血圧上昇、急な浮腫増悪などが重要である。認めた場合はリハビリ継続より医療者への確認を優先する。"
+      },
+      {
+        "q": "7. 妊娠中の深部静脈血栓症（DVT）を疑う場面で、理学療法士の対応として最も適切なのはどれか。",
+        "choices": [
+          "A. 一側下腿の腫脹・疼痛・熱感がある場合は、マッサージで循環を促してから再評価する",
+          "B. 左右差のあるふくらはぎ腫脹や疼痛があれば、運動・徒手介入を中止し医療者へ連絡する",
+          "C. 妊娠中の下肢浮腫は生理的なので、一側性でも通常メニューを継続する",
+          "D. 歩くと痛みが軽くなる場合はDVTを否定できるため、有酸素運動を追加する"
+        ],
+        "answer": "B",
+        "explanation": "一側下肢の腫脹・疼痛・熱感、左右差のある下腿周径増大はDVTを疑う所見である。マッサージや運動で血栓リスクを高めないよう、介入を中止し医療者へつなぐ。"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "第3章",
+    "label": "産後の身体リスク",
+    "color": "#7B2D8B",
+    "bg": "#EDD6F5",
+    "questions": [
+      {
+        "q": "8. 産後の尿失禁に対する骨盤底筋トレーニングを説明する場合、最も適切なのはどれか。",
+        "choices": [
+          "A. 腹圧性・混合性尿失禁では保存療法の重要な選択肢だが、症状や骨盤底の状態に応じて内容を調整する",
+          "B. 尿漏れがあれば全例で最大収縮をできるだけ多く行うことが第一選択である",
+          "C. 骨盤底筋トレーニングは産後早期には意味がなく、2年後以降に開始する",
+          "D. 骨盤底過緊張が疑われる場合も、弛緩より収縮回数を増やすことを優先する"
+        ],
+        "answer": "A",
+        "explanation": "骨盤底筋トレーニングは腹圧性・混合性尿失禁の保存療法として重要である。ただし過緊張、疼痛、排尿困難がある場合は収縮練習一辺倒ではなく、弛緩や呼吸、専門評価も検討する。"
+      },
+      {
+        "q": "9. 産後の腹直筋離開（DRA）を評価・説明する際、最も適切なのはどれか。",
+        "choices": [
+          "A. 離開幅が2cm以上なら、症状や機能に関係なく手術適応と説明する",
+          "B. 離開幅に加え、腹白線の張力、疼痛、体幹機能、日常動作での症状を合わせて判断する",
+          "C. 離開があっても腹筋強化のため、まずクランチを反復して幅の変化を見る",
+          "D. 帝王切開後は腹部を切開しているため、腹直筋離開の評価は不要である"
+        ],
+        "answer": "B",
+        "explanation": "DRAは幅だけで治療方針を決めない。腹白線の張力、体幹機能、疼痛、尿失禁や重だるさなどの症状、日常動作での腹圧管理を含めて評価する。"
+      },
+      {
+        "q": "10. 産後のランニング復帰について、最も適切な説明はどれか。",
+        "choices": [
+          "A. 産後6週健診で異常がなければ、骨盤底症状に関係なくジョギングを開始してよい",
+          "B. 産後12週以降を一つの目安とし、骨盤底症状・体幹機能・30分程度の歩行耐久性などを確認して段階的に進める",
+          "C. 痛みがなければ産後2週でもランニングは安全と考え、強度で調整する",
+          "D. 尿漏れがある場合は、ランニングではなく高負荷筋トレから再開する"
+        ],
+        "answer": "B",
+        "explanation": "産後ランニング復帰は産後12週以降を目安に、骨盤底症状、体幹・下肢機能、歩行耐久性、疼痛の有無などを確認して段階的に進める。6週健診だけで走行可否が決まるわけではない。"
+      },
+      {
+        "q": "11. 産後に骨盤の重だるさ、下垂感、尿漏れを訴える人への対応として最も適切なのはどれか。",
+        "choices": [
+          "A. 産後によくある症状なので、本人が気にしなければ高強度運動を継続する",
+          "B. 骨盤底機能障害や骨盤臓器脱の可能性を考え、負荷を下げて評価し、必要時は医師・助産師へつなぐ",
+          "C. 骨盤底筋を強く締める練習だけを毎回追加し、症状の有無は重視しない",
+          "D. 体重が戻れば自然に治るため、姿勢や腹圧管理の指導は不要である"
+        ],
+        "answer": "B",
+        "explanation": "骨盤の重だるさ、下垂感、尿漏れは骨盤底機能障害や骨盤臓器脱のサインとなり得る。高負荷運動を急がず、症状評価・腹圧管理・必要時の医療連携を行う。"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "第4章",
+    "label": "産後の姿勢・育児動作",
+    "color": "#B05A00",
+    "bg": "#FAE8D0",
+    "questions": [
+      {
+        "q": "12. 産後早期の活動量を上げる際、最も安全な進め方はどれか。",
+        "choices": [
+          "A. 疲労や出血があっても、産後の体力低下を防ぐため予定メニューを優先する",
+          "B. 創部状態、悪露、疼痛、骨盤底症状、睡眠・疲労を確認し、低負荷から段階的に増やす",
+          "C. 骨盤底症状があっても、先に有酸素運動で体重管理を優先する",
+          "D. 授乳中は運動が母乳に悪影響を及ぼすため、すべて中止する"
+        ],
+        "answer": "B",
+        "explanation": "産後早期は分娩様式、創部、悪露、疼痛、骨盤底症状、睡眠不足などを確認しながら低負荷から段階的に進める。症状が増える場合は負荷を再調整する。"
+      },
+      {
+        "q": "13. 授乳・抱っこで首肩や腰が痛い人への指導として最も適切なのはどれか。",
+        "choices": [
+          "A. 痛みの主因は抱っこそのものなので、抱っこ時間をできるだけゼロにする",
+          "B. 背筋を常に伸ばすよう指導し、赤ちゃんの位置やクッション使用は本人に任せる",
+          "C. 赤ちゃんを体に近づけ、クッションで高さを作り、左右差や休息を含めて負担を減らす方法を一緒に調整する",
+          "D. 授乳姿勢は育児方法の問題であり、理学療法では扱わない"
+        ],
+        "answer": "C",
+        "explanation": "産後の頸肩・腰痛には授乳や抱っこ姿勢が関与することが多い。赤ちゃんを体に近づける、高さを作る、左右差を減らす、休息を入れるなど、生活に合わせて具体策を調整する。"
+      },
+      {
+        "q": "14. 腹直筋離開や帝王切開創部痛がある産後の起き上がり指導として、最も勧めやすいのはどれか。",
+        "choices": [
+          "A. 仰臥位から頭を持ち上げ、腹直筋を使ってまっすぐ起きる",
+          "B. 両脚をそろえて挙上し、反動で体幹を起こす",
+          "C. 側臥位を経由し、腕で支えながら腹圧上昇を抑えて起きる",
+          "D. 痛みがあっても腹筋回復のためにクランチ動作で起きる"
+        ],
+        "answer": "C",
+        "explanation": "腹直筋離開や創部痛がある場合、腹圧を急に上げる起き上がりは負担になりやすい。側臥位を経由し、腕で支えながら起きる方法は日常動作指導として使いやすい。"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "第5章",
+    "label": "メンタルヘルス",
+    "color": "#8B2020",
+    "bg": "#FAD6D6",
+    "questions": [
+      {
+        "q": "15. EPDS（エジンバラ産後うつ病質問票）の扱いとして、最も適切なのはどれか。",
+        "choices": [
+          "A. EPDSは産後うつ病を確定診断する検査であり、点数だけで治療方針を決める",
+          "B. 10項目の自己記入式スクリーニングであり、点数・表情・生活状況・希死念慮などを合わせて支援につなげる",
+          "C. 身体機能評価の尺度なので、心理面の支援や連携判断には使わない",
+          "D. 点数が低ければ、本人がつらさを訴えていてもメンタル面の確認は不要である"
+        ],
+        "answer": "B",
+        "explanation": "EPDSは産後うつのスクリーニングや支援者とのコミュニケーションに使われる自己記入式質問票であり、確定診断ではない。点数だけでなく、言動、生活状況、希死念慮の有無を合わせて判断する。"
+      },
+      {
+        "q": "16. 産後の母親が「消えてしまいたい」と話した場合、理学療法士の対応として最も適切なのはどれか。",
+        "choices": [
+          "A. 一時的な育児疲れとして、運動メニューを軽くして次回再確認する",
+          "B. 本人との信頼関係を守るため、誰にも共有しないと約束する",
+          "C. その場の安全を確認し、医師・助産師・精神科など適切な支援先へ速やかにつなぐ",
+          "D. 気分転換を目的に有酸素運動を追加し、発言には深く触れない"
+        ],
+        "answer": "C",
+        "explanation": "希死念慮を示す発言は緊急性のあるサインとして扱う。安全確認を行い、本人を孤立させず、医師・助産師・精神科など多職種へ速やかにつなぐ。守秘義務より安全確保が優先される場面がある。"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "第6章",
+    "label": "実務・連携",
+    "color": "#3A5A8B",
+    "bg": "#D6DFFA",
+    "questions": [
+      {
+        "q": "17. 産前産後リハビリの初回確認で、最も実務上の優先度が高い組み合わせはどれか。",
+        "choices": [
+          "A. 主訴、運動歴、既往歴、疼痛部位を確認し、妊娠週数や産科指示は必要時のみ確認する",
+          "B. 妊娠週数または産後週数、分娩様式、合併症、産科からの活動制限、現在の警告症状を確認する",
+          "C. 姿勢評価、筋力評価、柔軟性評価を先に行い、産科情報は介入後に確認する",
+          "D. 年齢、体重変化、睡眠時間を確認すれば、安全管理としては十分である"
+        ],
+        "answer": "B",
+        "explanation": "産前産後では、妊娠週数または産後週数、分娩様式、合併症、産科からの活動制限、警告症状の有無が介入可否・負荷設定に直結する。一般的な運動歴や姿勢評価より先に確認すべき安全情報である。"
+      },
+      {
+        "q": "18. 産前産後リハビリの記録・説明・連携として、最も適切なのはどれか。",
+        "choices": [
+          "A. 介入内容と運動回数を記録していれば十分で、中止基準や説明内容は口頭で共有すればよい",
+          "B. 評価所見、介入目的、リスク説明、同意、中止基準、症状変化、連携判断を記録し、必要時に多職種と共有できるようにする",
+          "C. 産科的な異常が疑われても、理学療法の範囲外として記録せず本人に産科受診を任せる",
+          "D. 患者が希望している場合は、産科指示や症状変化より予定プログラムの遂行を優先する"
+        ],
+        "answer": "B",
+        "explanation": "産前産後リハビリでは、何を行ったかだけでなく、目的・リスク説明・同意・中止基準・症状変化・医療連携判断まで記録することが安全管理と継続支援に重要である。"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "第7章",
+    "label": "声かけと心理的安全性",
+    "color": "#2A6F6F",
+    "bg": "#D8F0F0",
+    "questions": [
+      {
+        "q": "19. 骨盤底・会陰部・腹部などデリケートな部位を評価する前の対応として、最も適切なのはどれか。",
+        "choices": [
+          "A. 評価の必要性を説明し、医療職として必要な範囲で触れることを伝えれば、明確な同意確認までは不要である",
+          "B. 触れる部位と目的を説明し、同性スタッフが担当する場合は中止できることの説明は省略できる",
+          "C. 目的・方法・触れる部位・代替案・いつでも中止できることを説明し、同意を得てから行う",
+          "D. 不安を与えないため、詳しい説明はせず、評価しながら必要に応じて補足する"
+        ],
+        "answer": "C",
+        "explanation": "デリケートな部位の評価では、目的、方法、触れる部位、代替案、拒否・中止できることを事前に説明し、明確な同意を得る。同性スタッフであっても同意や中止可能性の説明は省略しない。"
+      },
+      {
+        "q": "20. 産後の不調を相談された時、心理的安全性を保ちつつ評価につなげる声かけとして最も適切なのはどれか。",
+        "choices": [
+          "A. 産後は痛みや尿漏れが出やすいので、まずは様子を見ましょう",
+          "B. つらいですね。では骨盤底筋を毎日しっかり締める練習から始めましょう",
+          "C. つらさがあるのですね。今いちばん困っている場面を一緒に確認し、必要なら医師や助産師とも連携しましょう",
+          "D. 不安が強いと症状が気になりやすいので、できるだけ前向きに考えましょう"
+        ],
+        "answer": "C",
+        "explanation": "産後の不調は身体面・心理面・生活背景が重なりやすい。症状を軽視せず、本人の困りごとから評価し、必要時は医師・助産師などへつなぐ姿勢が心理的安全性につながる。"
+      }
+    ]
+  }
+];
+
+// ════════════════════════════════════════════════════════════
+// STATE
+// ════════════════════════════════════════════════════════════
+const ACADEMY_URL = 'https://coamo-s.com/mr_academy.html';
+const QUESTION_COUNTS = { 1: 3, 2: 4, 3: 4, 4: 3, 5: 2, 6: 2, 7: 2 }; // 合計20問
+let testQuestions = [];
+let current = 0;
+let answers = [];
+let chapScores = {};
+
+// ════════════════════════════════════════════════════════════
+// INIT CHIPS
+// ════════════════════════════════════════════════════════════
+(function initChips() {
+  const wrap = document.getElementById('chip-list');
+  CHAPTERS.forEach(ch => {
+    const span = document.createElement('span');
+    span.className = 'chip';
+    span.style.background = ch.color;
+    span.textContent = `${ch.title}：${ch.label}`;
+    wrap.appendChild(span);
+  });
+})();
+
+// ════════════════════════════════════════════════════════════
+// HELPERS
+// ════════════════════════════════════════════════════════════
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-' + id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function getLevel(score) {
+  if (score <= 9) {
+    return {
+      title: '基礎から整理したいレベル',
+      color: 'var(--red)',
+      html: '<p>産前産後リハビリの安全管理・禁忌・身体変化を、これから整理していく段階です。まずは「何をしてよいか」よりも「何をしてはいけないか」を理解することが、妊産婦さんを安心して担当する第一歩です。</p>'
+    };
+  }
+  if (score <= 14) {
+    return {
+      title: '基本はわかるが、実践判断に不安が残るレベル',
+      color: 'var(--orange)',
+      html: '<p>基本的な知識はありますが、症例ごとの判断、リスク対応、声かけの部分で迷いが出やすい段階です。産前産後リハビリでは、知識を覚えるだけでなく、目の前の妊産婦さんに合わせて安全に介入する力が必要です。</p>'
+    };
+  }
+  if (score <= 17) {
+    return {
+      title: '中級手前レベル',
+      color: 'var(--blue)',
+      html: '<p>かなり理解できています。次のステップは、骨盤底・腹直筋離開・腰痛・メンタル面・声かけを、症例ごとに組み合わせて判断できるようになることです。知識を現場で使える形に変えていきましょう。</p>'
+    };
+  }
+  return {
+    title: '実践準備レベル',
+    color: 'var(--green)',
+    html: '<p>基礎知識は十分にあります。ただし実際の現場では、正解を選ぶだけでなく、評価し、説明し、リスクを見極め、必要時に医師・助産師へつなぐ判断が求められます。次は実践症例で判断力を磨く段階です。</p>'
+  };
+}
+
+// ════════════════════════════════════════════════════════════
+// START
+// ════════════════════════════════════════════════════════════
+function startTest() {
+  if (typeof gtag === 'function') {
+    gtag('event', 'test_start', {
+      test_name: '産前産後リハビリ基礎力チェック20'
+    });
+  }
+
+  testQuestions = [];
+  chapScores = {};
+
+  CHAPTERS.forEach(ch => {
+    const count = QUESTION_COUNTS[ch.id] || 0;
+    if (!count) return;
+
+    // 実践判断寄りに調整した20問から、章ごとの配分どおりに出題。
+    const picked = shuffle(ch.questions).slice(0, count);
+
+    chapScores[ch.id] = { correct: 0, total: count, title: ch.title, label: ch.label, color: ch.color };
+    picked.forEach(q => {
+      testQuestions.push({ chapId: ch.id, chapTitle: ch.title, chapColor: ch.color, chapBg: ch.bg, ...q });
+    });
+  });
+
+  testQuestions = shuffle(testQuestions);
+  current = 0;
+  answers = [];
+  showScreen('question');
+  renderQuestion();
+}
+
+// ════════════════════════════════════════════════════════════
+// QUESTION RENDER
+// ════════════════════════════════════════════════════════════
+function renderQuestion() {
+  const q = testQuestions[current];
+  const total = testQuestions.length;
+  const pct = (current / total) * 100;
+
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-fill').style.background = q.chapColor;
+  document.getElementById('prog-text').textContent = `問 ${current + 1} / ${total}`;
+  const correctSoFar = answers.filter(a => a.correct).length;
+  document.getElementById('score-live').textContent = `正答：${correctSoFar}問`;
+
+  const chap = CHAPTERS.find(c => c.id === q.chapId);
+  const badge = document.getElementById('chap-badge');
+  badge.textContent = chap ? `${chap.title}　${chap.label}` : q.chapTitle;
+  badge.style.background = q.chapColor;
+
+  document.getElementById('q-num').textContent = `問題 ${current + 1}`;
+  document.getElementById('q-text').textContent = q.q.replace(/^H?\d+-?\d*\.?(【難】)?/, '').trim();
+
+  const choicesDiv = document.getElementById('choices');
+  choicesDiv.innerHTML = '';
+  q.choices.forEach(c => {
+    const key = c[0];
+    const text = c.slice(3);
+    const btn = document.createElement('button');
+    btn.className = 'choice-btn';
+    btn.innerHTML = `<span class="key">${key}</span><span>${text}</span>`;
+    btn.onclick = () => selectAnswer(key, btn);
+    choicesDiv.appendChild(btn);
+  });
+
+  document.getElementById('exp-box').className = 'explanation-box';
+  document.getElementById('exp-box').innerHTML = '';
+  document.getElementById('btn-next').disabled = true;
+  document.getElementById('q-status').textContent = '';
+}
+
+function selectAnswer(key, btn) {
+  if (document.getElementById('btn-next').disabled === false) return;
+
+  const q = testQuestions[current];
+  const isCorrect = key === q.answer;
+
+  document.querySelectorAll('.choice-btn').forEach(b => {
+    b.disabled = true;
+    const k = b.querySelector('.key').textContent;
+    if (k === q.answer) b.classList.add('correct');
+    else if (b === btn && !isCorrect) b.classList.add('wrong');
+  });
+
+  const expBox = document.getElementById('exp-box');
+  expBox.className = 'explanation-box show ' + (isCorrect ? 'correct-exp' : 'wrong-exp');
+  expBox.innerHTML = `<strong>${isCorrect ? '✓ 正解！' : `✗ 不正解　正解は ${q.answer}`}</strong>${q.explanation}`;
+
+  answers.push({ selected: key, correct: isCorrect });
+  if (isCorrect) chapScores[q.chapId].correct++;
+
+  document.getElementById('q-status').textContent = isCorrect ? '正解 ✓' : '不正解 ✗';
+  document.getElementById('q-status').style.color = isCorrect ? 'var(--green)' : 'var(--red)';
+  document.getElementById('btn-next').disabled = false;
+  document.getElementById('btn-next').textContent = current + 1 < testQuestions.length ? '次の問題 →' : '結果を見る';
+}
+
+function nextQuestion() {
+  current++;
+  if (current >= testQuestions.length) showResult();
+  else renderQuestion();
+}
+
+// ════════════════════════════════════════════════════════════
+// RESULT
+// ════════════════════════════════════════════════════════════
+function showResult() {
+  showScreen('result');
+  const total = testQuestions.length;
+  const score = answers.filter(a => a.correct).length;
+  const pct = Math.round(score / total * 100);
+  const level = getLevel(score);
+
+  if (typeof gtag === 'function') {
+    gtag('event', 'test_complete', {
+      test_name: '産前産後リハビリ基礎力チェック20',
+      score: score,
+      total: total,
+      percent: pct
+    });
+  }
+
+  const circumference = 2 * Math.PI * 55;
+  const fill = document.getElementById('ring-fill');
+  fill.style.stroke = level.color;
+  fill.style.strokeDasharray = circumference;
+  fill.style.strokeDashoffset = circumference;
+  setTimeout(() => { fill.style.strokeDashoffset = circumference * (1 - score / total); }, 100);
+
+  document.getElementById('res-score').textContent = score;
+  document.getElementById('res-score').style.color = level.color;
+  document.getElementById('res-title').textContent = level.title;
+  document.getElementById('res-title').style.color = level.color;
+  document.getElementById('res-sub').textContent = `正答率 ${pct}%　${score} / ${total}問`;
+  document.getElementById('result-message').innerHTML = `<h3>あなたの現在地</h3>${level.html}`;
+
+  const tbody = document.getElementById('result-tbody');
+  tbody.innerHTML = '';
+  CHAPTERS.forEach(ch => {
+    const sc = chapScores[ch.id];
+    if (!sc) return;
+    const cpct = Math.round(sc.correct / sc.total * 100);
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${ch.color};margin-right:8px;"></span>${ch.title}　${ch.label}</td>
+      <td style="font-weight:700">${sc.correct} / ${sc.total}</td>
+      <td>
+        <div class="pct-bar">
+          <div class="pct-track"><div class="pct-fill" style="width:${cpct}%;background:${ch.color}"></div></div>
+          <span style="font-size:12px;font-weight:700;color:${ch.color};min-width:36px">${cpct}%</span>
+        </div>
+      </td>`;
+    tbody.appendChild(tr);
+  });
+
+  const trTotal = document.createElement('tr');
+  trTotal.style.fontWeight = '700';
+  trTotal.style.background = 'var(--gray-100)';
+  trTotal.innerHTML = `
+    <td>合計</td>
+    <td>${score} / ${total}</td>
+    <td>
+      <div class="pct-bar">
+        <div class="pct-track"><div class="pct-fill" style="width:${pct}%;background:${level.color}"></div></div>
+        <span style="font-size:12px;font-weight:700;color:${level.color};min-width:36px">${pct}%</span>
+      </div>
+    </td>`;
+  tbody.appendChild(trTotal);
+}
+
+// ════════════════════════════════════════════════════════════
+// RETAKE
+// ════════════════════════════════════════════════════════════
+function retakeTest() {
+  showScreen('intro');
+}
+</script>
+</body>
+</html>
